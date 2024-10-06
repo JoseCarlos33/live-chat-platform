@@ -1,0 +1,11 @@
+{
+  "name": "live-chat-platform",
+  "version": "1.0.0",
+  "description": "**Status:** Projeto em andamento...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jose noronha",
+  "license": "ISC"
+}
