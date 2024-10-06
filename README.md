@@ -2,8 +2,7 @@
 
 **Status:** Projeto em andamento...
 
-
-<span align="center" style="display: flex; justify-content: center; align-items: center; flex-direction: row; gap: 10px; margin-top: 42px; margin-bottom: 24px">
+<span align="center" style="display: flex; justify-content: center; align-items: center; flex-direction: row; gap: 10px; margin-top: 42px; margin-bottom: 24px; background-color: #ddd; padding: 20px">
     <img src="https://nestjs.com/img/logo_text.svg" alt="NestJS Logo" height="80"/>
     <img src="https://img.icons8.com/fluency/48/000000/plus-math.png" alt="green plus sign" height="40"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg" alt="Socket.IO Logo" height="80"/>
