@@ -12,3 +12,38 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id           String         @id @default(uuid())
+  name         String
+  rooms        ChatRoom[]     @relation("UserRooms")
+  messages     Message[]
+  chatRoomUser ChatRoomUser[]
+}
+
+model ChatRoom {
+  id           String         @id @default(uuid())
+  users        User[]         @relation("UserRooms")
+  messages     Message[]
+  chatRoomUser ChatRoomUser[]
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  content   String
+  createdAt DateTime @default(now())
+  userId    String
+  roomId    String
+  readed    Boolean  @default(false)
+  user      User     @relation(fields: [userId], references: [id])
+  chatRoom  ChatRoom @relation(fields: [roomId], references: [id])
+}
+
+model ChatRoomUser {
+  userId   String
+  roomId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chatRoom ChatRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+
+  @@id([userId, roomId])
+}

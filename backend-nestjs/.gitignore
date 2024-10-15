@@ -398,3 +398,8 @@ Temporary Items
 dist
 .webpack
 .serverless/**/*.zip
+
+
+prisma/migrations/
+prisma/dev.db
+prisma/dev.db-journal

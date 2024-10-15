@@ -1,2 +1,3 @@
 !/frontend-nextjs/.gitignore
 !/backend-nestjs/.gitignore
+node_modules

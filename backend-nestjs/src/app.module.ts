@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ChatGateway } from './chat.gateway';
+import { PrismaService } from './prisma.service';
+import { ChatController } from './chat.controller';
+import { ChatService } from './chat.service';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [ChatController],
+  providers: [ChatService, ChatGateway, PrismaService],
 })
 export class AppModule {}
